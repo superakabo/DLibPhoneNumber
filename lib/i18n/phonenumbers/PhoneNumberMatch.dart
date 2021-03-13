@@ -24,7 +24,13 @@ class PhoneNumberMatch {
   @override
   int get hashCode => hashValues(start, rawString, number);
 
-  bool equals(Object obj) {
+  @override
+  String toString() {
+    return "PhoneNumberMatch [$start,$end)$rawString";
+  }
+
+  @override
+  bool operator ==(Object obj) {
     if (this == obj) return true;
 
     if (!(obj is PhoneNumberMatch)) return false;
@@ -32,10 +38,5 @@ class PhoneNumberMatch {
     PhoneNumberMatch other = obj;
 
     return ((rawString == other.rawString) && (start == other.start) && (number == other.number));
-  }
-
-  @override
-  String toString() {
-    return "PhoneNumberMatch [$start,$end)$rawString";
   }
 }
