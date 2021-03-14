@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   protoc_plugin: ^20.0.0
+  quiver: ^3.0.0
 
 dev_dependencies:
   flutter_test:
